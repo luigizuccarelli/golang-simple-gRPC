@@ -93,3 +93,10 @@ $ protoc -I /home/lzuccarelli/Projects/protobuf --go_out=/home/lzuccarelli/Proje
 
 - build using make
 
+## Testing
+
+- scp client to pi cluster (ip 192.168.1.14)
+- start server
+- start client on remote pi server
+
+

@@ -20,7 +20,7 @@ func NewDataSchemaServiceGrpcImpl() *DataSchemaServiceGrpcImpl {
 
 //Add function implementation of gRPC Service.
 func (serviceImpl *DataSchemaServiceGrpcImpl) Get(ctx context.Context, in *domain.DataSchema) (*service.GetDataSchemaResponse, error) {
-	log.Println("Received request for adding repository with id " + strconv.FormatInt(in.Id, 10))
+	log.Println("Received request getting dataschema with id " + strconv.FormatInt(in.Id, 10))
 
 	return &service.GetDataSchemaResponse{
 		Dataschema: in,
