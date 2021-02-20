@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package domain;
+
+option go_package = "internal/gRPC/domain";
+
+message DataSchema {
+  int64 id = 1;
+  string name = 2;
+  string status = 3;
+  string payload = 4;
+}

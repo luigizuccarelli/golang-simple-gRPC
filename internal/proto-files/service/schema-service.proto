@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package service;
+
+option go_package = "internal/gRPC/service";
+
+import "internal/proto-files/domain/schema.proto";
+
+service DataSchemaService {
+	rpc get (domain.DataSchema) returns (GetDataSchemaResponse);
+}
+ 
+message GetDataSchemaResponse {
+	domain.DataSchema dataschema = 1;
+	Error error = 2;
+}
+
+message Error {
+	string code = 1;
+	string message = 2;
+}
